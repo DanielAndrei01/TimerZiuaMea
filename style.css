@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;1,100;1,200&display=swap');
+
+*{
+    box-sizing:border-box;
+}
+body{
+    background-image:url("./padure2.jpg");
+    font-family:"Poppins",sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-size:cover ;
+    background-position:center center ;
+    margin:0;
+}
+
+
+h1{
+    font-weight: BOLD;
+    margin-top: -10rem;
+    font-size:4rem;
+
+}
+.timer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.timer-container{
+    display: flex;
+
+}
+.big-text{
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin:0 2rem;
+}
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span{
+    font-size:1.5rem;
+} 
