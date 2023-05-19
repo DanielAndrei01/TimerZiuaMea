@@ -18,28 +18,24 @@ function countdown() {
 
   const diffMilliseconds = dataCurenta - dataZiuaMea;
 
-  // Calculate the total seconds difference
+  //Calculeaza numarul de secunde 
   const diffSeconds = Math.floor(diffMilliseconds / 1000);
 
-  // Calculate the years
+  // conversie in ani
   const years = Math.floor(diffSeconds / (365 * 24 * 3600));
   
-  // Calculate the remaining seconds after removing years
+  // cate secunde raman dupa calcularea anilor
   const remainingSeconds = diffSeconds % (365 * 24 * 3600);
   
-  // Calculate the number of leap years
   const leapYears = countLeapYears(dataZiuaMea.getFullYear(), dataCurenta.getFullYear());
 
-  // Calculate the total days difference after removing years and leap years
   const totalDays = remainingSeconds / 86400 - leapYears;
   
-  // Calculate the months and days
   const { months, days } = calculateMonthsAndDays(totalDays);
 
-  // Calculate the remaining seconds after removing years, leap years, months, and days
   const remainingSecondsWithoutYearsMonthsDays = remainingSeconds % 86400;
   
-  // Calculate the hours, minutes, and seconds
+  // Calculeaza orele minutele si secunde
   const hours = Math.floor(remainingSecondsWithoutYearsMonthsDays / 3600);
   const minutes = Math.floor((remainingSecondsWithoutYearsMonthsDays % 3600) / 60);
   const seconds = remainingSecondsWithoutYearsMonthsDays % 60;
